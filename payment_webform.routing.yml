@@ -1,7 +1,7 @@
 payment_webform.admin:
     path: '/admin/payment_webform'
     defaults: 
-        _controller: '\Drupal\payment_webform\Controller\TestController::adminOverview'
+        _controller: '\Drupal\Core\payment_webform\Controller\PaymentWebTestCase::adminOverview'
         _title: 'Payment Webform'
     requirements:
         _permission: 'access content'
