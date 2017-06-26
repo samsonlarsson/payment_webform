@@ -1,8 +1,14 @@
-payment_webform.admin:
-    path: '/admin/payment_webform'
-    defaults: 
-        _controller: '\Drupal\Core\payment_webform\Controller\PaymentWebTestCase::adminOverview'
-        _title: 'Payment Webform'
-    requirements:
-        _permission: 'access content'
-      
+payment_webform.page_finish:
+  path: /payment_webform/finish
+  defaults:
+    _title: 'Payment for Webform finished'
+    _controller: '\Drupal\payment_webform\Controller\DefaultController::payment_webform_page_finish'
+  requirements:
+    _custom_access: '\Drupal\payment_webform\Controller\DefaultController::payment_webform_page_finish_access'
+payment_webform.page_payment:
+  path: '/payment_webform/pay/{node}/{cid}'
+  defaults:
+    _title: 'Add a payment reference'
+    _controller: '\Drupal\payment_webform\Controller\DefaultController::payment_webform_page_payment'
+  requirements:
+    _custom_access: '\Drupal\payment_webform\Controller\DefaultController::payment_webform_page_payment_access'

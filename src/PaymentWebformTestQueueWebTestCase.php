@@ -1,6 +1,5 @@
 <?php
-
-use Drupal\Core\payment_webform\Controller\PaymentWebTestCase;
+namespace Drupal\payment_webform;
 
 class PaymentWebformTestQueueWebTestCase extends PaymentWebTestCase {
 

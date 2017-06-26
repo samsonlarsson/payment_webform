@@ -1,20 +1,13 @@
-name: Payment for Webform
-type: module
+name: 'Payment for Webform'
 description: 'Allows Webform submissions to receive payments.'
-configure: admin/config/services/payment/payment_webform
-# core: 8.x
+core: 8.x
 dependencies:
   - currency
-  - payment (>1.8)
+  - 'payment (>1.8)'
   - payment_reference
   - webform
 package: Payment
-files:
-  - tests/PaymentWebformTestQueueWebTestCase.test
-
-# Information added by  packaging script on 2013-11-05
-version: '8.x-1.5'
-core: '7.x'
-project: 'payment_webform'
+version: 8.x-1.5
+project: payment_webform
 datestamp: '1383677305'
-
+type: module
