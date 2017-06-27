@@ -152,8 +152,12 @@ function _webform_table_payment_webform($component, $value) {
     '!pid' => $pid
   ));
   if (payment_access('view')) {
-    $label = l($label, 'payment/' . $pid);
+    // @FIXME
+// l() expects a Url object, created from a route name or external URI.
+// $label = l($label, 'payment/' . $pid);
+
   }
 
   return $label;
 }
+
